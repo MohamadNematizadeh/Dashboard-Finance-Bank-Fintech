@@ -1,263 +1,285 @@
 <!DOCTYPE html>
 <html lang="ar" dir="fa">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Responsive Sidebar</title>
-  <!-- Link Styles -->
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Responsive Sidebar</title>
+    <!-- Link Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
-  <div class="sidebar">
-    <div class="logo_details">
-      <div class="logo_name"><img src="image/ParsTech-logo-1.png" style="width: 90px; display: flex;"></div>
-      <i class="bx bx-menu" id="btn"></i>
+<body class="bg-[#141332] text-white">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="sidebar bg-[#1D1D41] h-screen w-64">
+            <div class="logo_details flex items-center justify-between p-4">
+                <div class="logo_name">
+                    <img src="image/ParsTech-logo-1.png" style="width: 90px;">
+                </div>
+                <i class="bx bx-menu cursor-pointer" id="btn"></i>
+            </div>
+            <ul class="nav-list mt-3">
+                <li class="group">
+                    <a href="#" class="flex items-center p-4 hover:bg-blue-600 rounded">
+                        <i class="bx bx-grid-alt text-2xl"></i>
+                        <span class="link_name ml-4">Dashboard</span>
+                    </a>
+                    <span class="tooltip group-hover:opacity-100 opacity-0 transition-opacity">Dashboard</span>
+                </li>
+                <li class="group">
+                    <a href="#" class="flex items-center p-4 hover:bg-blue-600 rounded">
+                        <i class="bx bx-user text-2xl"></i>
+                        <span class="link_name ml-4">Analytics</span>
+                    </a>
+                    <span class="tooltip group-hover:opacity-100 opacity-0 transition-opacity">Analytics</span>
+                </li>
+                <li class="group">
+                    <a href="#" class="flex items-center p-4 hover:bg-blue-600 rounded">
+                        <i class="bx bx-chat text-2xl"></i>
+                        <span class="link_name ml-4">Accounts</span>
+                    </a>
+                    <span class="tooltip group-hover:opacity-100 opacity-0 transition-opacity">Accounts</span>
+                </li>
+                <li class="group">
+                    <a href="#" class="flex items-center p-4 hover:bg-blue-600 rounded">
+                        <i class="bx bx-cog text-2xl"></i>
+                        <span class="link_name ml-4">Settings</span>
+                    </a>
+                    <span class="tooltip group-hover:opacity-100 opacity-0 transition-opacity">Settings</span>
+                </li>
+                <hr class="border-gray-600 my-4">
+                <li class="group">
+                    <a href="#" class="flex items-center p-4 hover:bg-blue-600 rounded">
+                        <i class="bx bx-folder text-2xl"></i>
+                        <span class="link_name ml-4">Security</span>
+                    </a>
+                    <span class="tooltip group-hover:opacity-100 opacity-0 transition-opacity">Security</span>
+                </li>
+                <li class="group">
+                    <a href="#" class="flex items-center p-4 hover:bg-blue-600 rounded">
+                        <i class="bx bx-cart-alt text-2xl"></i>
+                        <span class="link_name ml-4">Help Centre</span>
+                    </a>
+                    <span class="tooltip group-hover:opacity-100 opacity-0 transition-opacity">Help Centre</span>
+                </li>
+                <li class="mt-auto">
+                    <div class="flex items-center p-4">
+                        <img src="profile.jpeg" alt="profile image" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <div class="name">Anna Jhon</div>
+                            <div class="designation text-sm text-gray-400">Admin</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <main class="flex-1 p-6 mt-2">
+            <div class="relative flex items-center justify-between">
+                <div class="text-white mr-4">
+                    <h2 class="text-3xl font-semibold">Welcome Back, Ali</h2>
+                    <p class="mt-2">Here’s what’s happening with your store today.</p>
+                </div>
+                <form action="/search" class="max-w-[490px] w-full px-4">
+                    <div class="relative">
+                        <input type="text" name="q"
+                            class="w-full border h-12 shadow p-4 rounded-full dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200"
+                            placeholder="search">
+                        <button type="submit">
+                            <svg class="text-teal-400 h-5 w-5 absolute top-3.5 right-3 fill-current dark:text-teal-300"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" x="0px" y="0px" viewBox="0 0 56.966 56.966"
+                                style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
+                                <path
+                                    d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+                <!-- Card 1 -->
+                <div class="bg-[#1D1D41] p-6 rounded-md shadow-sm flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="bg-[#64CFF6] p-3 rounded-full">
+
+                            <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.00691 15.2513C2.07174 15.7998 2.56891 16.1919 3.11738 16.127L12.0552 15.0706C12.6036 15.0058 12.9957 14.5086 12.9309 13.9601C12.866 13.4117 12.3689 13.0196 11.8204 13.0844L3.8757 14.0235L2.93665 6.07879C2.87182 5.53033 2.37465 5.13826 1.82618 5.20309C1.27771 5.26792 0.885647 5.76509 0.950475 6.31356L2.00691 15.2513ZM13.3607 0.380783L2.21478 14.5147L3.78522 15.7532L14.9311 1.61922L13.3607 0.380783Z"
+                                    fill="white" />
+                            </svg>
+
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg">Total Income</h3>
+
+                            <h4 class="text-2xl font-semibold">$632.000</h4>
+                        </div>
+                    </div>
+                    <button class="btn bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">+1.29%</button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-[#1D1D41] p-6 rounded-md shadow-sm flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="bg-orange-600 p-3 rounded-full">
+                            <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.7618 0.856683C12.6826 0.310102 12.1753 -0.0688157 11.6288 0.0103471L2.7217 1.30039C2.17512 1.37955 1.7962 1.88681 1.87536 2.4334C1.95453 2.97998 2.46179 3.3589 3.00837 3.27973L10.9258 2.13303L12.0725 10.0504C12.1516 10.597 12.6589 10.9759 13.2055 10.8968C13.7521 10.8176 14.131 10.3103 14.0518 9.76375L12.7618 0.856683ZM1.80116 16.0193L12.5733 1.59847L10.9709 0.401571L0.19884 14.8224L1.80116 16.0193Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg">Total Outcome</h3>
+                            <h4 class="text-2xl font-semibold">$632.000</h4>
+                        </div>
+                    </div>
+                    <button class="btn bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700">+1.29%</button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-[#1D1D41] p-5 rounded-md shadow-sm">
+                    <h4 class="text-2x1 font-semibold">Analytics</h4>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="h-4 w-4 bg-blue-600 rounded-full"></div>
+                            <p>Daily payment</p>
+                            <div class="h-4 w-4 bg-[#64CFF6] rounded-full"></div>
+                            <p>Hobby</p>
+
+                            <button
+                                class="mt-1 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Button</button>
+
+                        </div>
+                    </div>
+                    <img src="image/msg5807177023-22347.000002.jpg" style="width: 900px;" class="mt-20 rounded-md"
+                        alt="">
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-[#1D1D41] p-6 rounded-md shadow-sm">
+                    <h4 class="text-2xl font-semibold">My Card</h4>
+                    <p class="mt-2">Card Balance</p>
+                    <h3 class="text-2xl font-semibold mt-2">$15,595.015</h3>
+                    <img src="image/card.png" class="mt-4 w-full rounded-md" alt="">
+                    <div class="mt-4 flex justify-center space-x-2">
+                        <span class="w-2 h-2 bg-gray-200 rounded-full"></span>
+                        <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
+                        <span class="w-2 h-2 bg-gray-200 rounded-full"></span>
+                    </div>
+                    <div class="mt-4 flex space-x-4">
+                        <button class="flex-1 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">Manage
+                            Cards</button>
+                        <button
+                            class="flex-1 bg-purple-800 text-white px-4 py-2 rounded-lg hover:bg-purple-900">Transfer</button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-[#1D1D41] p-6 rounded-md shadow-sm">
+                    <h4 class="text-2x1 font-semibold">Analytics</h4>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <form action="/search" class="max-w-[490px] w-full px-4">
+                                <div class="relative">
+                                    <input type="text" name="q"
+                                        class="w-full border h-12 shadow p-4 rounded-full dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200"
+                                        placeholder="search">
+                                    <button type="submit">
+                                        <svg class="text-teal-400 h-5 w-5 absolute top-3.5 right-3 fill-current dark:text-teal-300"
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            version="1.1" x="0px" y="0px" viewBox="0 0 56.966 56.966"
+                                            style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
+                                            <path
+                                                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+
+                            <button
+                                class=" bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Button</button>
+                        </div>
+                    </div>
+<br>
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr>
+                                <th class="py-2">Name</th>
+                                <th class="py-2">Date</th>
+                                <th class="py-2">Amount</th>
+                                <th class="py-2">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 flex items-center">
+                                    <img src="image/card.png" class="w-10 h-10 rounded-full mr-2" alt="">
+                                    Adobe After Effect
+                                </td>
+                                <td class="py-2">Sat, 20 Apr 2020</td>
+                                <td class="py-2">$80.09</td>
+                                <td class="py-2">Paid</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 flex items-center">
+                                    <img src="image/card.png" class="w-10 h-10 rounded-full mr-2" alt="">
+                                    Adobe After Effect
+                                </td>
+                                <td class="py-2">Sat, 20 Apr 2020</td>
+                                <td class="py-2">$80.09</td>
+                                <td class="py-2">Paid</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 flex items-center">
+                                    <img src="image/card.png" class="w-10 h-10 rounded-full mr-2" alt="">
+                                    Adobe After Effect
+                                </td>
+                                <td class="py-2">Sat, 20 Apr 2020</td>
+                                <td class="py-2">$80.09</td>
+                                <td class="py-2">Paid</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-[#1D1D41] p-6 rounded-md shadow-sm">
+                    <h4 class="text-2xl font-semibold">My Card</h4>
+                    <img src="image/photo1719816429 (1).jpeg" class="mt-4 w-full rounded-md" alt="">
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="h-4 w-4 bg-blue-600 rounded-full"></div>
+                            <p>Daily payment</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="h-4 w-4 bg-[#64CFF6] rounded-full"></div>
+                            <p>Hobby</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <p class="text-sm">55%</p>
+                        <p class="text-sm">20%</p>
+                    </div>
+                    <button class="mt-4 bg-purple-600 text-white w-full px-4 py-2 rounded-lg hover:bg-purple-700">Manage
+                        Cards</button>
+                </div>
+            </div>
+        </main>
     </div>
-    <ul class="nav-list">
-
-      <li>
-        <a href="#">
-          <i class="bx bx-grid-alt"></i>
-          <span class="link_name">Dashboard</span>
-        </a>
-        <span class="tooltip">Dashboard</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bx bx-user"></i>
-          <span class="link_name">Analytics</span>
-        </a>
-        <span class="tooltip">Analytics</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bx bx-chat"></i>
-          <span class="link_name">Accounts</span>
-        </a>
-        <span class="tooltip">Accounts</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bx bx-cog"></i>
-          <span class="link_name">Settings</span>
-        </a>
-        <span class="tooltip">Settings</span>
-      </li>
-      <hr>
-      <li>
-        <a href="#">
-          <i class="bx bx-folder"></i>
-          <span class="link_name">Security</span>
-        </a>
-        <span class="tooltip">Security</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bx bx-cart-alt"></i>
-          <span class="link_name">Help Centre</span>
-        </a>
-        <span class="tooltip">Help Centre</span>
-      </li>
-
-      <li class="profile">
-        <div class="profile_details">
-          <img src="profile.jpeg" alt="profile image">
-          <div class="profile_content">
-            <div class="name">Anna Jhon</div>
-            <div class="designation">Admin</div>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <main class=" content home-section flex-1  text-white p-6" style="background-color: #141332;">
-    <div class="row">
-    <div class="text" style="color: white;">
-      <h2>Welcome Back, Ali</h2>
-      <br>
-      <p>Here’s what’s happening with your store today.</p>
-    </div>
-    <!-- card 1 -->
-    <div class=" m-0 flex  flex-wrap sm:mt-9">
-      <div class=" px-9 sm:mt-9">
-        <div class="flex items-center px-5 py-6  rounded-md shadow-sm" style="background-color: #1D1D41;">
-          <div class="p-3  bg-opacity-75 rounded-full" style="background-color: #64CFF6;">
-            <svg class="w-8 h-8 text-white">
-            </svg>
-          </div>
-          <div class="mx-5">
-            <h3>Total Income</h3>
-            <h4 class="text-2xl font-semibold">$632.000</h4>
-          </div>
-          <button type="button"
-            class="btn font-medium flex items-center cursor-pointer border shadow hover:shadow-lg focus:outline-none focus:shadow-outline mx-2 mb-2 border-green-600 bg-white text-green-600 hover:bg-green-600 hover:border-green-600 hover:text-white h-10 px-6 rounded"><span
-              class="capitalize">+1.29%</span></button>
-
-        </div>
-      </div>
-      <!-- card 2 -->
-
-      <div class=" m-0 col-md-7 m-0 col-md-7 w-full  px-2 mt-2  px-9 sm:w-1/4 xl:w-2/2 sm:mt-9">
-        <div class="flex items-center px-5 py-6  rounded-md shadow-sm" style="background-color: #1D1D41;">
-          <div class="p-3 bg-orange-600 bg-opacity-75 rounded-full">
-            <svg class="w-8 h-8 text-white" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            </svg>
-          </div>
-          <div class="mx-5">
-            <h2>Total Outcome</h2>
-            <h4 class="text-2xl font-semibol">$632.000</h4>
-          </div>
-          <button type="button"
-            class="btn font-medium flex items-center cursor-pointer border shadow hover:shadow-lg focus:outline-none focus:shadow-outline mx-2 mb-2 bg-red-600 text-red-100 border-red-600 hover:bg-red-700 hover:border-red-700 hover:text-white h-10 px-6 rounded"><span
-              class="capitalize">+1.29%</span></button>
-
-        </div>
-      </div>
-      <!-- card 3 -->
-
-      <div class=" m-0 col-md-7 w-full  px-2 mt-2  px-9 sm:w-1/2 xl:w-2/2 sm:mt-9">
-        <div class="flex items-center px-5 py-6  rounded-md shadow-sm" style="background-color: #1D1D41;">
-         
-            <h4 class=" flex mx-10text-2xl font-semibold">Analytics</h4>
-            <div class="mx-10 m-2 flex h-2 w-2 items-center justify-center rounded-full bg-blue-600">
-            </div>
-            <p>Daily payment</p>
-            
-            <p><div class="mx-10 flex h-2 w-2 items-center justify-center rounded-full"
-              style="background-color: #64CFF6;">
-            </div> Hobby</p>
-            <button
-              class="mx-10 px-5 py-3 rounded-xl  font-medium text-white  hover:bg-indigo-800 active:bg-grey-900 focus:outline-none border-4 border-white focus:border-purple-200 transition-all">Button<i
-                class="mdi mdi-circle-outline ml-2 text-xl align-middle leading-none"></i></button>
-
-        </div>
-        <img src="image/msg5807177023-22347.000002.jpg" style="height: 600px; width:900px;" alt="">
-      </div>
-
-      <!-- card 4 -->
-      <div class=" w-full px-2 mt-2 sm:w-1/2 xl:w-2/2 sm:mt-9">
-        <div class="flex items-center px-2 py-6  rounded-md shadow-sm" style="background-color: #1D1D41;">
-          <div class="mx-1">
-            <h4 class="text-2xl font-semibold">My Card</h4>
-            <br>
-            <p>Card Balance</p>
-            <br>
-            <h3 class="text-2xl font-semibold ">$15,595.015</h3>
-            <br>
-            <img src="image/card.png" style="width: 700px;" class="w-24 mx-auto">
-            <br>
-            <div class="flex justify-center">
-              <template x-for="(item,index) in slides">
-                <span :id="`slideDot${index}`" class="w-2 h-2 rounded-full mx-1"
-                  :class="{'bg-indigo-500':index==currentIndex,'bg-gray-200':index!==currentIndex}"></span>
-              </template>
-
-              <span :id="`slideDot${index}`" class="w-2 h-2 rounded-full mx-1 bg-gray-200"
-                :class="{'bg-indigo-500':index==currentIndex,'bg-gray-200':index!==currentIndex}"
-                id="slideDot0"></span>
-
-              <span :id="`slideDot${index}`" class="w-2 h-2 rounded-full mx-1 bg-indigo-500"
-                :class="{'bg-indigo-500':index==currentIndex,'bg-gray-200':index!==currentIndex}"
-                id="slideDot1"></span>
-
-              <span :id="`slideDot${index}`" class="w-2 h-2 rounded-full mx-1 bg-gray-200"
-                :class="{'bg-indigo-500':index==currentIndex,'bg-gray-200':index!==currentIndex}"
-                id="slideDot2"></span>
-            </div>
-            <button
-              class=" mx-32 px-9 py-4 text-sm text-with-900 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Manage
-              Cards</button>
-            <button
-              class=" px-9 py-4 text-sm text-with-900 bg-purple-800  font-semibold rounded-full border border-purple-200 hover:text-white hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Transfer</button>
-          </div>
-        </div>
-      </div>
-      
-      <div class="w-full px-2 mt-2 sm:w-1/2 sm:mt-9">
-        <div class=" items-center px-8 py-3  rounded-md shadow-sm" style="background-color: #1D1D41;">
-          <div class="mx-1">
-            <br>
-              <table class="w-full table-auto text-left">
-                <thead>
-                  <tr>
-                    <th class="py-2">Name</th>
-                    <th class="py-2">Date</th>
-                    <th class="py-2">Amount</th>
-                    <th class="py-2">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="py-2 flex items-center"><img src="image/card.png" class="w-10 h-10 rounded-full mr-2"
-                        alt="">Adobe After Effect</td>
-                    <td class="py-2">Sat, 20 Apr 2020</td>
-                    <td class="py-2">$80.09</td>
-                    <td class="py-2">Paid</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2 flex items-center"><img src="image/card.png" class="w-10 h-10 rounded-full mr-2"
-                        alt="">Adobe After Effect</td>
-                    <td class="py-2">Sat, 20 Apr 2020</td>
-                    <td class="py-2">$80.09</td>
-                    <td class="py-2">Paid</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2 flex items-center"><img src="image/card.png" class="w-10 h-10 rounded-full mr-2"
-                        alt="">Adobe After Effect</td>
-                    <td class="py-2">Sat, 20 Apr 2020</td>
-                    <td class="py-2">$80.09</td>
-                    <td class="py-2">Paid</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-        </div>
-      </div>
-
-
-      <div class=" w-full px-2 mt-2 sm:w-1/2 xl:w-2/2 sm:mt-9">
-        <div class="flex items-center px-2 py-6  rounded-md shadow-sm" style="background-color: #1D1D41;">
-          <div class="mx-1">
-          <div class="mt-4">
-            <h4 class="text-2xl font-semibold">My Card </h4>
-          </div>
-          <br>
-          <img src="image/photo1719816429 (1).jpeg" alt="">
-          <br>
-          <div class="flex">
-            <div class="mx-2 flex h-2 w-2 items-center justify-center rounded-full bg-blue-600">
-            
-            </div>
-            <p>Daily payment</p>
-            <div class="mx-2 flex h-2 w-2 items-center justify-center rounded-full"
-              style="background-color: #64CFF6;">
-            </div>
-            <p>Hobby</p>
-          </div>
-          <div class="flex">
-          <h2 class="mx-2 flex text-sm">55%</h2>
-          <h2 class="mx-28 flex text-sm">20%</h2>
-
-        </div>
-          <br>
-
-          <button
-            class=" m-0 col-md-8 px-2 py-3 text-sm   w-full items-center rounded-lg  px-6 py-5 text-base text-danger-700  dark:text-danger-500 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Manage
-            Cards</button>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </main>
-
-  <!-- Scripts -->
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
