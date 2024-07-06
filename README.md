@@ -1,6 +1,5 @@
-  <h2 align="center">Dashboard Finance Bank Fintechwebsite </h2>
-[![My Skills](https://skillicons.dev/icons?i=html,css,bootstrap,javascript)](https://skillicons.dev)
-
+<h2 align="center">Dashboard Finance Bank Fintechwebsite </h2>
+<p align="center" ><img src = "https://skillicons.dev/icons?i=html,css,bootstrap,javascript"></p>
   <p align="center">
     A simple personal website
     <br/>
